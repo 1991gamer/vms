@@ -143,5 +143,5 @@ jobs:
           tag: latest
           commit: main
           body: ${{ github.event.head_commit.message }}
-          #artifacts: "build/libv86*.js,build/libv86*.js.map,build/v86*.wasm"
+          artifacts: "artifact.tar"
           prerelease: false
