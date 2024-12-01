@@ -115,9 +115,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
-    permissions:
-      pages: write      # to deploy to Pages
-      id-token: write   # to verify the deployment originates from an appropriate source
+    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       # Deployment to github pages
@@ -126,6 +124,7 @@ jobs:
         uses: actions/deploy-pages@v3
 
       # After deployment, cut a new release tag
+
       - name: Get artifacts
         uses: actions/download-artifact@v3
 
