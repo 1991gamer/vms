@@ -124,6 +124,7 @@ jobs:
         uses: actions/deploy-pages@v3
 
       # After deployment, cut a new release tag
+
       - name: Get artifacts
         uses: actions/download-artifact@v3
 
@@ -133,9 +134,8 @@ jobs:
       - name: Release to GitHub
         uses: ncipollo/release-action@v1
         with:
-          tag_name: latest
           tag: latest
-          commit: master
+          commit: main
           body: ${{ github.event.head_commit.message }}
           #artifacts: "build/libv86*.js,build/libv86*.js.map,build/v86*.wasm"
           prerelease: true
