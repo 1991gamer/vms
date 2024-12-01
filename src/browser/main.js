@@ -4,7 +4,8 @@
 {
     const ON_LOCALHOST = !location.hostname.endsWith("copy.sh");
 
-    const DEFAULT_NETWORKING_PROXIES = ["wss://relay.widgetry.org/", "ws://localhost:8080/"];
+    //const DEFAULT_NETWORKING_PROXIES = ["wss://relay.widgetry.org/", "ws://localhost:8080/"];
+    const DEFAULT_NETWORKING_PROXIES = ["ws://127.0.0.1:8080/"];
     const DEFAULT_MEMORY_SIZE = 128;
     const DEFAULT_VGA_MEMORY_SIZE = 8;
     const DEFAULT_BOOT_ORDER = 0;
@@ -132,7 +133,7 @@
         if(DEBUG && ON_LOCALHOST)
         {
             // don't use online relay in debug mode
-            $("relay_url").value = "ws://localhost:8080/";
+            $("relay_url").value = "ws://127.0.0.1:8080/";
         }
 
         const query_args = new URLSearchParams(location.search);
@@ -172,6 +173,27 @@
                 ].join(" "),
                 bzimage_initrd_from_filesystem: true,
                 net_device_type: "virtio",
+            },
+            {
+                id: "alpine",
+                name: "Custom Alpine",
+                memory_size: 512 * 1024 * 1024,
+                vga_memory_size: 8 * 1024 * 1024,
+                //screen_container: document.getElementById("screen_container"),
+                //bios: { url: "/bios/seabios.bin" },
+                //vga_bios: { url: "../bios/vgabios.bin" },
+                filesystem: {
+                    baseurl: host + "alpine-rootfs-flat/",
+                    basefs: { url: host + "alpine-fs.json" },
+                },
+                bzimage_initrd_from_filesystem: true,
+                cmdline: [
+                    "rw root=host9p rootfstype=9p rootflags=trans=virtio,cache=loose",
+                    "modules=virtio_pci tsc=reliable",
+                ].join(" "),
+                //network_relay_url: "ws://127.0.0.1:8080/",
+                //initial_state: { url: "../images/alpine-state.bin" },
+                net_device_type: "virtio", // new
             },
             {
                 id: "copy/skiffos",
@@ -1530,9 +1552,10 @@
             }
         }
         set_proxy_value("network_none", "");
-        set_proxy_value("network_fetch", "fetch");
-        set_proxy_value("network_relay", "wss://relay.widgetry.org/");
-        set_proxy_value("network_wisp", "wisps://wisp.mercurywork.shop/v86/");
+        //set_proxy_value("network_fetch", "fetch");
+        //set_proxy_value("network_relay", "wss://relay.widgetry.org/");
+        set_proxy_value("network_relay", "wss://127.0.0.1:8080/");
+        //set_proxy_value("network_wisp", "wisps://wisp.mercurywork.shop/v86/");
     }
 
     function debug_onload()

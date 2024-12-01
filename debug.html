@@ -91,6 +91,7 @@
         <input type="button" value="Tiny Core" id="start_tinycore">
         <input type="button" value="OpenWRT" id="start_openwrt">
         <br>
+        <input type="button" value="Custom Alpine" id="start_alpine">
         <input type="button" value="Arch Linux" id="start_archlinux">
         <input type="button" value="Arch Linux (boot)" id="start_archlinux-boot">
         <input type="button" value="Damn Small Linux" id="start_dsl">
@@ -188,7 +189,8 @@
             <tr>
                 <td><label for="relay_url">Networking proxy (leave blank to disable)</label></td>
                 <td>
-                    <input id="relay_url" type="text" value="wss://relay.widgetry.org/">
+                    <!--<input id="relay_url" type="text" value="wss://relay.widgetry.org/"> -->
+                    <input id="relay_url" type="text" value="ws://127.0.0.1:8080/">
                 </td>
             </tr>
 
