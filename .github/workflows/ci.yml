@@ -126,13 +126,6 @@ jobs:
         uses: actions/deploy-pages@v3
 
       # After deployment, cut a new release tag
-      - name: Delete old release and tag
-        uses: dev-drprasad/delete-tag-and-release@v1.0.1
-        with:
-          delete_release: false
-          tag_name: latest
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Get artifacts
         uses: actions/download-artifact@v3
 
