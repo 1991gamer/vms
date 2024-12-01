@@ -1,7 +1,7 @@
 FROM docker.io/i386/alpine:3.20.0
 
 ENV KERNEL=lts
-ENV ADDPKGS="nodejs docker tmux git"
+ENV ADDPKGS="nodejs docker tmux git python3"
 
 RUN apk add openrc alpine-base agetty alpine-conf $ADDPKGS
 
@@ -25,8 +25,9 @@ RUN if [ "$KERNEL" == "lts" ]; then \
     chmod +x /root/networking.sh; \
 fi
 
-RUN echo -e "rc-update add docker default\nservice docker start\naddgroup $USER docker" > /root/docker.sh
-RUN echo 'console.log("Hello, world!");' > /root/hello.js
+RUN echo -e "rc-update add docker default\nservice docker start\naddgroup $USER docker" > /root/docker.sh && \
+    chmod +x /root/docker.sh; \
+    echo 'console.log("Hello, world!");' > /root/hello.js
 
 # https://wiki.alpinelinux.org/wiki/Alpine_Linux_in_a_chroot#Preparing_init_services
 RUN for i in devfs dmesg mdev hwdrivers; do rc-update add $i sysinit; done
