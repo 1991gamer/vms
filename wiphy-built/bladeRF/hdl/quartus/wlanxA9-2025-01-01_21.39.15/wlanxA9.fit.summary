@@ -1,0 +1,20 @@
+Fitter Status : Successful - Wed Jan  1 21:36:07 2025
+Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Revision Name : wlan
+Top-level Entity Name : bladerf
+Family : Cyclone V
+Device : 5CEBA9F23C8
+Timing Models : Final
+Logic utilization (in ALMs) : 35,781 / 113,560 ( 32 % )
+Total registers : 55909
+Total pins : 173 / 224 ( 77 % )
+Total virtual pins : 0
+Total block memory bits : 2,137,500 / 12,492,800 ( 17 % )
+Total RAM Blocks : 324 / 1,220 ( 27 % )
+Total DSP Blocks : 100 / 342 ( 29 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 4 / 8 ( 50 % )
+Total DLLs : 0 / 4 ( 0 % )

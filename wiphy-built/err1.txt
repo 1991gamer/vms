@@ -1,0 +1,13 @@
+-- Installing: /etc/udev/rules.d/88-nuand-bladerf1.rules                                 
+CMake Error at misc/udev/cmake_install.cmake:54 (file):                                  
+  file INSTALL cannot copy file                                                          
+  "/home/spatula/vms/wiphy-built/bladeRF/host/build/misc/udev/88-nuand-bladerf1.rules"   
+  to "/etc/udev/rules.d/88-nuand-bladerf1.rules": Permission denied.                     
+Call Stack (most recent call first):                                                     
+  misc/cmake_install.cmake:47 (include)                                                  
+  cmake_install.cmake:49 (include)   
+
+
+
+java.lang.UnsatisfiedLinkError: /home/spatula/intelFPGA_lite/23.1std/quartus/linux64/libtcl_jni_bridge.so: libicui18n.so.69: cannot open shared object file: No such file or directo
+

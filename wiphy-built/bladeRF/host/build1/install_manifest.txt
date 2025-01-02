@@ -1,0 +1,11 @@
+/home/spatula/vms/wiphy-artifacts/lib/pkgconfig/libbladeRF.pc
+/home/spatula/vms/wiphy-artifacts/lib/libbladeRF.so.2
+/home/spatula/vms/wiphy-artifacts/lib/libbladeRF.so
+/home/spatula/vms/wiphy-artifacts/share/cmake/bladeRF/bladeRFConfig.cmake
+/home/spatula/vms/wiphy-artifacts/share/cmake/bladeRF/bladeRFConfigVersion.cmake
+/home/spatula/vms/wiphy-artifacts/include/libbladeRF.h
+/home/spatula/vms/wiphy-artifacts/include/bladeRF1.h
+/home/spatula/vms/wiphy-artifacts/include/bladeRF2.h
+/home/spatula/vms/wiphy-artifacts/bin/bladeRF-cli
+/home/spatula/vms/wiphy-artifacts/bin/bladeRF-fsk
+/home/spatula/vms/wiphy-artifacts/bin/bladeRF-power

@@ -1,0 +1,62 @@
+Info: Starting: Create simulation model
+Info: qsys-generate /home/spatula/vms/wiphy-built/bladeRF-wiphy/fpga/ip/altera/fft64/fft64.qsys --simulation=VERILOG --allow-mixed-language-simulation --output-directory=/home/spatula/vms/wiphy-built/bladeRF-wiphy/fpga/ip/altera/fft64/fft64/simulation --family="Cyclone V" --part=Unknown
+Progress: Loading fft64/fft64.qsys
+Progress: Reading input file
+Progress: Adding fft_ii_0 [altera_fft_ii 19.1]
+Warning: fft_ii_0: Used altera_fft_ii 23.1 (instead of 19.1)
+Progress: Parameterizing module fft_ii_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: fft64.fft_ii_0: Radix-2 digit reverse implied
+Info: fft64: Generating fft64 "fft64" for SIM_VERILOG
+Info: fft_ii_0: --- add file: fft64_fft_ii_0_opt_twr2.hex
+Info: fft_ii_0: --- add file: fft64_fft_ii_0_opt_twi1.hex
+Info: fft_ii_0: --- add file: fft64_fft_ii_0_opt_twr1.hex
+Info: fft_ii_0: --- add file: fft64_fft_ii_0_opt_twi2.hex
+Info: fft_ii_0: "fft64" instantiated altera_fft_ii "fft_ii_0"
+Info: fft64: Done "fft64" with 2 modules, 204 files
+Info: qsys-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd=/home/spatula/vms/wiphy-built/bladeRF-wiphy/fpga/ip/altera/fft64/fft64/fft64.spd --output-directory=/home/spatula/vms/wiphy-built/bladeRF-wiphy/fpga/ip/altera/fft64/fft64/simulation/ --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=/home/spatula/vms/wiphy-built/bladeRF-wiphy/fpga/ip/altera/fft64/fft64/fft64.spd --output-directory=/home/spatula/vms/wiphy-built/bladeRF-wiphy/fpga/ip/altera/fft64/fft64/simulation/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in /home/spatula/vms/wiphy-built/bladeRF-wiphy/fpga/ip/altera/fft64/fft64/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Generating the following file(s) for VCSMX simulator in /home/spatula/vms/wiphy-built/bladeRF-wiphy/fpga/ip/altera/fft64/fft64/simulation/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Skipping VCS script generation since VHDL file $QUARTUS_INSTALL_DIR/eda/sim_lib/altera_syn_attributes.vhd is required for simulation
+Info: Generating the following file(s) for XCELIUM simulator in /home/spatula/vms/wiphy-built/bladeRF-wiphy/fpga/ip/altera/fft64/fft64/simulation/ directory:
+Info: 	xcelium/cds.lib
+Info: 	xcelium/hdl.var
+Info: 	xcelium/xcelium_setup.sh
+Info: 	1 .cds.lib files in xcelium/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in /home/spatula/vms/wiphy-built/bladeRF-wiphy/fpga/ip/altera/fft64/fft64/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under /home/spatula/vms/wiphy-built/bladeRF-wiphy/fpga/ip/altera/fft64/fft64/simulation/.
+Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: Finished: Create Modelsim Project.
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate /home/spatula/vms/wiphy-built/bladeRF-wiphy/fpga/ip/altera/fft64/fft64.qsys --synthesis=VHDL --output-directory=/home/spatula/vms/wiphy-built/bladeRF-wiphy/fpga/ip/altera/fft64/fft64/synthesis --family="Cyclone V" --part=Unknown
+Progress: Loading fft64/fft64.qsys
+Progress: Reading input file
+Progress: Adding fft_ii_0 [altera_fft_ii 19.1]
+Warning: fft_ii_0: Used altera_fft_ii 23.1 (instead of 19.1)
+Progress: Parameterizing module fft_ii_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: fft64.fft_ii_0: Radix-2 digit reverse implied
+Info: fft64: Generating fft64 "fft64" for QUARTUS_SYNTH
+Info: fft_ii_0: --- add file: fft64_fft_ii_0_opt_twr2.hex
+Info: fft_ii_0: --- add file: fft64_fft_ii_0_opt_twi1.hex
+Info: fft_ii_0: --- add file: fft64_fft_ii_0_opt_twr1.hex
+Info: fft_ii_0: --- add file: fft64_fft_ii_0_opt_twi2.hex
+Info: fft_ii_0: "fft64" instantiated altera_fft_ii "fft_ii_0"
+Info: fft64: Done "fft64" with 2 modules, 46 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
